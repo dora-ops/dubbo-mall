@@ -260,12 +260,27 @@
                 <artifactId>shiro-all</artifactId>
                 <version>${shiro.version}</version>
             </dependency>
-            <!-- Json -->
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>1.7.2</version>
+            </dependency>
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>3.6.0</version>
+            </dependency>
             <dependency>
                 <groupId>org.json</groupId>
                 <artifactId>json</artifactId>
-                <version>${json.version}</version>
+                <version>20160810</version>
             </dependency>
+            <!-- Json -->
+            <!--<dependency>-->
+                <!--<groupId>org.json</groupId>-->
+                <!--<artifactId>json</artifactId>-->
+                <!--<version>${json.version}</version>-->
+            <!--</dependency>-->
             <!-- Mail -->
             <dependency>
                 <groupId>javax.mail</groupId>

@@ -326,7 +326,7 @@ public class OrderServiceImpl implements OrderService {
         //设置验证token键值对 tokenName:token
         jedisClient.set(tokenName,token);
         jedisClient.expire(tokenName,PAY_EXPIRE);
-        emailUtil.sendEmailDealThank(EMAIL_SENDER,"【XMall商城】支付待审核处理",tokenName,token,tbThanks);
+//        emailUtil.sendEmailDealThank(EMAIL_SENDER,"【XMall商城】支付待审核处理",tokenName,token,tbThanks);
         return 1;
     }
 

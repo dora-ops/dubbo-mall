@@ -7,7 +7,7 @@ return (function( root, factory ) {
     var modules = {},
 
         // 内部require, 简单不完全实现。
-        // https://github.com/amdjs/amdjs-api/wiki/require
+        // /amdjs/amdjs-api/wiki/require
         _require = function( deps, callback ) {
             var args, len, i;
 
@@ -154,7 +154,7 @@ return (function( root, factory ) {
     /**
      * Web Uploader内部类的详细说明，以下提及的功能类，都可以在`WebUploader`这个变量中访问到。
      *
-     * As you know, Web Uploader的每个文件都是用过[AMD](https://github.com/amdjs/amdjs-api/wiki/AMD)规范中的`define`组织起来的, 每个Module都会有个module id.
+     * As you know, Web Uploader的每个文件都是用过[AMD](/amdjs/amdjs-api/wiki/AMD)规范中的`define`组织起来的, 每个Module都会有个module id.
      * 默认module id为该文件的路径，而此路径将会转化成名字空间存放在WebUploader中。如：
      *
      * * module `base`：WebUploader.Base
@@ -5164,7 +5164,7 @@ return (function( root, factory ) {
         return api;
     });
     /**
-     * 代码来自于：https://github.com/blueimp/JavaScript-Load-Image
+     * 代码来自于：/blueimp/JavaScript-Load-Image
      * 暂时项目中只用了orientation.
      *
      * 去除了 Exif Sub IFD Pointer, GPS Info IFD Pointer, Exif Thumbnail.
@@ -6567,7 +6567,7 @@ return (function( root, factory ) {
                 }
             },
     
-            // https://github.com/stomita/ios-imagefile-megapixel/
+            // /stomita/ios-imagefile-megapixel/
             // blob/master/src/megapix-image.js
             _renderImageToCanvas: (function() {
     

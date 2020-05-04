@@ -16,7 +16,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * Created by Exrick on 2017/8/15.
+ * Created by yzl on 2017/8/15.
  */
 @Configuration  //让Spring来加载该类配置
 @EnableWebMvc   //非SpringBoot需启用
@@ -38,10 +38,10 @@ public class Swagger2Config {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("XMall Api Documentation")
+                .title(" Api Documentation")
                 .description("XMall商城管理后台API接口文档")
                 .termsOfServiceUrl("http://blog.exrick.cn")
-                .contact(new Contact("Exrick", "http://blog.exrick.cn", "1012139570@qq.com"))
+                .contact(new Contact("yzl", "http://blog.exrick.cn", "1012139570@qq.com"))
                 .version("1.0.0")
                 .build();
     }

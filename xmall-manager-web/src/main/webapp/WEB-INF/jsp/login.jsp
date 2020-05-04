@@ -7,7 +7,7 @@
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="XMall后台管理系统 v1.0,XMall,XMall购物商城后台管理系统">
+    <meta name="keywords" content="XMall后台管理系统 v1.0,,XMall购物商城后台管理系统">
     <meta name="description" content="XMall后台管理系统 v1.0，是一款电商后台管理系统，适合中小型CMS后台系统。">
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
     function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -80,7 +80,7 @@
     <div class="center-container">
         <!--header-->
         <div class="header-w3l">
-            <h1>XMall<span class="title">后台管理系统</span></h1>
+            <h1><span class="title">后台管理系统</span></h1>
         </div>
         <!--//header-->
         <div class="main-content-agile">
@@ -111,7 +111,7 @@
 
         <!--footer-->
         <div class="footer">
-            <p>&copy; 2017 XMall. All rights reserved | Design by <a href="http://blog.exrick.cn" target="_blank">Exrick</a></p>
+
         </div>
         <!--//footer-->
     </div>

@@ -5,7 +5,7 @@ import cn.exrick.common.pojo.DataTablesResult;
 import cn.exrick.manager.pojo.TbMember;
 
 /**
- * @author Exrick
+ * @author yzl
  * @date 2017/8/11
  */
 public interface MemberService {

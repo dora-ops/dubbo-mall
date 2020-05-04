@@ -1001,9 +1001,9 @@ window.Docs = {
 };
 
 /*!
- * https://github.com/es-shims/es5-shim
+ * /es-shims/es5-shim
  * @license es5-shim Copyright 2009-2015 by contributors, MIT License
- * see https://github.com/es-shims/es5-shim/blob/master/LICENSE
+ * see /es-shims/es5-shim/blob/master/LICENSE
  */
 
 // vim: ts=4 sts=4 sw=4 expandtab
@@ -1012,7 +1012,7 @@ window.Docs = {
 ;
 
 // UMD (Universal Module Definition)
-// see https://github.com/umdjs/umd/blob/master/templates/returnExports.js
+// see /umdjs/umd/blob/master/templates/returnExports.js
 (function (root, factory) {
     'use strict';
 
@@ -1778,18 +1778,18 @@ window.Docs = {
         }
     }, !spliceWorksWithEmptyObject);
     var spliceWorksWithLargeSparseArrays = (function () {
-        // Per https://github.com/es-shims/es5-shim/issues/295
+        // Per /es-shims/es5-shim/issues/295
         // Safari 7/8 breaks with sparse arrays of size 1e5 or greater
         var arr = new $Array(1e5);
         // note: the index MUST be 8 or larger or the test will false pass
         arr[8] = 'x';
         arr.splice(1, 1);
         // note: this test must be defined *after* the indexOf shim
-        // per https://github.com/es-shims/es5-shim/issues/313
+        // per /es-shims/es5-shim/issues/313
         return arr.indexOf('x') === 7;
     }());
     var spliceWorksWithSmallSparseArrays = (function () {
-        // Per https://github.com/es-shims/es5-shim/issues/295
+        // Per /es-shims/es5-shim/issues/295
         // Opera 12.15 breaks on this, no idea why.
         var n = 256;
         var arr = [];
@@ -2033,7 +2033,7 @@ window.Docs = {
     ];
     var dontEnumsLength = dontEnums.length;
 
-    // taken directly from https://github.com/ljharb/is-arguments/blob/master/index.js
+    // taken directly from /ljharb/is-arguments/blob/master/index.js
     // can be replaced with require('is-arguments') if we ever use a build process instead
     var isStandardArguments = function isArguments(value) {
         return toStr(value) === '[object Arguments]';
@@ -2320,7 +2320,7 @@ window.Docs = {
             var year = originalGetUTCFullYear(this);
 
             var month = originalGetUTCMonth(this);
-            // see https://github.com/es-shims/es5-shim/issues/111
+            // see /es-shims/es5-shim/issues/111
             year += Math.floor(month / 12);
             month = (month % 12 + 12) % 12;
 
@@ -5394,7 +5394,7 @@ Resolver.prototype.resolveAllOf = function(spec, obj, depth) {
     }
     var item = obj[key];
     if(item === null) {
-      throw new TypeError('Swagger 2.0 does not support null types (' + obj + ').  See https://github.com/swagger-api/swagger-spec/issues/229.');
+      throw new TypeError('Swagger 2.0 does not support null types (' + obj + ').  See /swagger-api/swagger-spec/issues/229.');
     }
     if(typeof item === 'object') {
       this.resolveAllOf(spec, item, depth + 1);
@@ -18342,7 +18342,7 @@ var nextTick =(function () {
         };
 
     } else if (typeof setImmediate === "function") {
-        // In IE10, Node.js 0.9+, or https://github.com/NobleJS/setImmediate
+        // In IE10, Node.js 0.9+, or /NobleJS/setImmediate
         if (typeof window !== "undefined") {
             requestTick = setImmediate.bind(window, flush);
         } else {
@@ -24844,7 +24844,7 @@ SwaggerUi.partials.signature = (function () {
     return str.join('');
   };
 
-  // Commenting this funtion as the names are now determined beforehand and the prefix part is exposed as a separate function | https://github.com/swagger-api/swagger-ui/issues/2577
+  // Commenting this funtion as the names are now determined beforehand and the prefix part is exposed as a separate function | /swagger-api/swagger-ui/issues/2577
  /** var getName = function (name, xml) {
     var result = name || '';
 
@@ -24909,7 +24909,7 @@ SwaggerUi.partials.signature = (function () {
 
     if (!items) { return getErrorMessage(); }
     var key = name;
-    // If there is a name specified for the array elements, use that for the array elements name | https://github.com/swagger-api/swagger-ui/issues/2577
+    // If there is a name specified for the array elements, use that for the array elements name | /swagger-api/swagger-ui/issues/2577
     if(items.xml && items.xml.name) {
         key = items.xml.name;
     }
@@ -25079,7 +25079,7 @@ SwaggerUi.partials.signature = (function () {
     }
     this.config = config || {};
     this.config.modelsToIgnore = this.config.modelsToIgnore || [];
-    // name is already set by getDescriptorByRef or getDescriptor function depending on the type. Only prefix, if present is needed to be set here | https://github.com/swagger-api/swagger-ui/issues/2577
+    // name is already set by getDescriptorByRef or getDescriptor function depending on the type. Only prefix, if present is needed to be set here | /swagger-api/swagger-ui/issues/2577
     this.name = getPrefix(name, definition.xml);
     this.definition = definition;
     this.models = models;
@@ -25090,11 +25090,11 @@ SwaggerUi.partials.signature = (function () {
     var modelType = simpleRef($ref);
     var model = models[modelType] || {};
     var type = model.definition && model.definition.type ? model.definition.type : 'object';
-    // If model definition xml name is present, then that will be preferred over model name. This is the case of preferring XmlElement name over XmlRootElement name if XmlElement name is provided | https://github.com/swagger-api/swagger-ui/issues/2577
+    // If model definition xml name is present, then that will be preferred over model name. This is the case of preferring XmlElement name over XmlRootElement name if XmlElement name is provided | /swagger-api/swagger-ui/issues/2577
     if(model.definition && model.definition.xml && model.definition.xml.name) {
         name = name || model.definition.xml.name || model.name;
     }
-    // else only model name will be considered for determination | https://github.com/swagger-api/swagger-ui/issues/2577
+    // else only model name will be considered for determination | /swagger-api/swagger-ui/issues/2577
     else {
         name = name || model.name;
     }
@@ -25114,7 +25114,7 @@ SwaggerUi.partials.signature = (function () {
 
   function getDescriptor (name, definition, models, config){
     var type = definition.type || 'object';
-    // If definition xml name is present, then that will be preferred over name | https://github.com/swagger-api/swagger-ui/issues/2577
+    // If definition xml name is present, then that will be preferred over name | /swagger-api/swagger-ui/issues/2577
     if(definition.xml && definition.xml.name) {
         name = definition.xml.name || name;
     }

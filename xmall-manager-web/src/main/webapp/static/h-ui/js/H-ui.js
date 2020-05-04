@@ -81,7 +81,7 @@ function stopDefault(e) {
 
 /* =======================================================================
  * jQuery.cookie.js v1.4.1
- * https://github.com/carhartl/jQuery-cookie
+ * /carhartl/jQuery-cookie
  *
  * Copyright 2006, 2014 Klaus Hartl
  * Released under the MIT license
@@ -182,9 +182,9 @@ function stopDefault(e) {
  * Requires jQuery v1.5 or later
  * Copyright (c) 2014 M. Alsup
  * Examples and documentation at: http://malsup.com/jquery/form/
- * Project repository: https://github.com/malsup/form
+ * Project repository: /malsup/form
  * Dual licensed under the MIT and GPL licenses.
- * https://github.com/malsup/form#copyright-and-license
+ * /malsup/form#copyright-and-license
  * ======================================================================== */
 // AMD support
 (function(factory) {
@@ -393,7 +393,7 @@ function stopDefault(e) {
 
 		// are there files to upload?
 		// [value] (issue #113), also see comment:
-		// https://github.com/malsup/form/commit/588306aedba1de01388032d5f42a60159eea9228#commitcomment-2180219
+		// /malsup/form/commit/588306aedba1de01388032d5f42a60159eea9228#commitcomment-2180219
 		var fileInputs = $('input[type=file]:enabled', this).filter(function() {
 			return $(this).val() !== '';
 		});
@@ -1730,7 +1730,7 @@ function stopDefault(e) {
 
 /* =======================================================================
 * jQuery.responsive-nav.js v1.0.39
-* https://github.com/viljamis/responsive-nav.js
+* /viljamis/responsive-nav.js
 * http://responsive-nav.com
 *
 * Copyright (c) 2015 @viljamis
@@ -2565,7 +2565,7 @@ function stopDefault(e) {
 
 /* =======================================================================
  * jquery.emailsuggest.js v1.0 邮箱自动提示
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 !function($) {
 	var
@@ -4924,7 +4924,7 @@ $(function() {
  * http://getbootstrap.com/javascript/#buttons
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 !function($) {
 	'use strict';
@@ -5022,7 +5022,7 @@ $(function() {
 
 /* =======================================================================
  * jQuery.stickUp.js v0.5.7 BETA  by:LiranCohen
- * https://github.com/LiranCohen/stickUp
+ * /LiranCohen/stickUp
  * ======================================================================== */
 jQuery(function($) {
 	$(document).ready(function(){
@@ -5145,7 +5145,7 @@ jQuery(function($) {
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 !function($) {
 	'use strict';
@@ -5370,7 +5370,7 @@ jQuery(function($) {
  * http://getbootstrap.com/javascript/#dropdowns
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 !function($) {
 	'use strict';
@@ -5508,7 +5508,7 @@ $(function() {
  * http://getbootstrap.com/javascript/#transitions
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 !function ($) {
 	'use strict';	
@@ -5557,7 +5557,7 @@ $(function() {
  * Inspired by the original jQuery.tipsy by Jason Frame
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 !function($) {
 	'use strict';
@@ -5838,7 +5838,7 @@ $(function() {
 		var isBody = el.tagName == 'BODY';
 		var elRect = el.getBoundingClientRect();
 		if (elRect.width == null) {
-			// width and height are missing in IE8, so compute them manually; see https://github.com/twbs/bootstrap/issues/14093
+			// width and height are missing in IE8, so compute them manually; see /twbs/bootstrap/issues/14093
 			elRect = $.extend({},
 			elRect, {
 				width: elRect.right - elRect.left,
@@ -6002,7 +6002,7 @@ $(function() {
  * http://getbootstrap.com/javascript/#popovers
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 !
 function($) {
@@ -6108,7 +6108,7 @@ $(function() {
  * http://getbootstrap.com/javascript/#alerts
  * ========================================================================
  * Copyright 2011-2014 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Licensed under MIT (/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 !function($) {
 	'use strict';
@@ -8671,7 +8671,7 @@ function($) {
 	jquery 1.7.1 + webkit + show inline datetimepicker in bootstrap popover.
 	Method show() does not set display css correctly and datetimepicker is not shown.
 	Changed to .css('display', 'block') solve the problem.
-	See https://github.com/vitalets/x-editable/issues/37
+	See /vitalets/x-editable/issues/37
 	
 	In jquery 1.7.2+ everything works fine.
 	*/

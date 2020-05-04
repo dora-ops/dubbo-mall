@@ -234,7 +234,7 @@ KindEditor.plugin('multiimage', function(K) {
 				}
 			},
 			beforeRemove : function() {
-				// IE9 bugfix: https://github.com/kindsoft/kindeditor/issues/72
+				// IE9 bugfix: /kindsoft/kindeditor/issues/72
 				if (!K.IE || K.V <= 8) {
 					swfupload.remove();
 				}

@@ -16,7 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @author Exrick
+ * @author yzl
  * @date 2017/7/29
  */
 @RestController
@@ -27,7 +27,7 @@ public class ItemController{
 
     @Autowired
     private ItemService itemService;
-    @Autowired
+//    @Autowired
     private SearchItemService searchItemService;
 
     @RequestMapping(value = "/item/{itemId}",method = RequestMethod.GET)

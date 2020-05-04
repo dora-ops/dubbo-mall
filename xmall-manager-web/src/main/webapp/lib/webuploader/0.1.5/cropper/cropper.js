@@ -1,6 +1,6 @@
 /*!
  * Cropper v0.3.2
- * https://github.com/fengyuanchen/cropper
+ * /fengyuanchen/cropper
  *
  * Copyright 2014 Fengyuan Chen
  * Released under the MIT license

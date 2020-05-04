@@ -108,7 +108,7 @@
 
     <!-- 引用dubbo服务 -->
     <dubbo:application name="xmall-manager-web"/>
-    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
+    <dubbo:registry protocol="zookeeper" address="114.55.142.72:2181"/>
     <dubbo:reference interface="cn.exrick.manager.service.ItemService" id="itemService" />
     <dubbo:reference interface="cn.exrick.manager.service.MemberService" id="memberService" />
     <dubbo:reference interface="cn.exrick.manager.service.ItemCatService" id="itemCatService" />
@@ -118,5 +118,5 @@
     <dubbo:reference interface="cn.exrick.manager.service.SystemService" id="systemService" />
     <dubbo:reference interface="cn.exrick.content.service.ContentService" id="contentService" />
     <dubbo:reference interface="cn.exrick.content.service.PanelService" id="panelService" />
-    <dubbo:reference interface="cn.exrick.search.service.SearchItemService" id="searchItemService" />
+    <!--<dubbo:reference interface="cn.exrick.search.service.SearchItemService" id="searchItemService" />-->
 </beans>

@@ -6,7 +6,7 @@ import cn.exrick.manager.pojo.TbItemCat;
 import java.util.List;
 
 /**
- * @author Exrick
+ * @author yzl
  * @date 2017/8/2
  */
 public interface ItemCatService {

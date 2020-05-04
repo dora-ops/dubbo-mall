@@ -6,7 +6,7 @@ import cn.exrick.manager.pojo.TbItem;
 
 
 /**
- * @author Exrick
+ * @author yzl
  * @date 2017/7/29
  */
 public interface ItemService {

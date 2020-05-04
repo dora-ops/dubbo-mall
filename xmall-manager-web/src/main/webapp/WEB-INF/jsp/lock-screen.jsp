@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="Exrick">
+    <meta name="author" content="yzl">
     <link rel="Shortcut Icon" href="icon/all.png" />
     <title>XMall后台管理系统 v1.0</title>
-    <meta name="keywords" content="XMall后台管理系统 v1.0,XMall,XMall购物商城后台管理系统">
+    <meta name="keywords" content="XMall后台管理系统 v1.0,,XMall购物商城后台管理系统">
     <meta name="description" content="XMall后台管理系统 v1.0，是一款电商后台管理系统，适合中小型CMS后台系统。">
 
     <title>Lock Screen</title>
@@ -37,7 +37,7 @@
 
     <div class="lock-box text-center">
         <img id="avatar" width="85px" height="85px" src="static/h-ui/images/ucnter/avatar-default.jpg" alt="lock avatar"/>
-        <h1 id="username">Exrick</h1>
+        <h1 id="username">yzl</h1>
         <span class="locked">Locked</span>
         <form role="form" class="form-inline" action="index">
             <div class="form-group col-lg-12">

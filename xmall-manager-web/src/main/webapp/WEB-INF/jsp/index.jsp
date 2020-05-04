@@ -23,13 +23,13 @@
     <script>DD_belatedPNG.fix('*');</script>
     <![endif]-->
     <title>XMall后台管理系统 v1.1</title>
-    <meta name="keywords" content="XMall后台管理系统 v1.1,XMall,XMall购物商城后台管理系统">
+    <meta name="keywords" content="XMall后台管理系统 v1.1,,XMall购物商城后台管理系统">
     <meta name="description" content="XMall后台管理系统 v1.1，是一款电商后台管理系统，适合中小型CMS后台系统。">
 </head>
 <body>
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
-        <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="/">XMall后台管理系统</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/">XMall后台管理系统</a>
+        <div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="/">后台管理系统</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/">XMall后台管理系统</a>
             <span class="logo navbar-slogan f-l mr-10 hidden-xs">v1.1</span>
             <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
             <nav class="nav navbar-nav">
@@ -41,8 +41,7 @@
                         </ul>
                         <li class="navbar-levelone current"><a href="javascript:;">平台</a></li>
                         <li class="navbar-levelone"><a href="javascript:;">财务</a></li>
-                        <li ><a href="http://xpay.exrick.cn" target="_blank">XPay支付系统</a></li>
-                        <li ><a href="http://xmall.exrick.cn" target="_blank">商城前台</a></li>
+
                     </li>
                 </ul>
             </nav>
@@ -57,9 +56,9 @@
                             <li><a onclick="logout()">退出</a></li>
                         </ul>
                     </li>
-                    <li id="thanks"> <a onclick="thanks()" title="捐赠"><i class="Hui-iconfont" style="font-size:18px">&#xe6bb;</i></a> </li>
+                    <%--<li id="thanks"> <a onclick="thanks()" title="捐赠"><i class="Hui-iconfont" style="font-size:18px">&#xe6bb;</i></a> </li>--%>
                     <li id="LockScreen"> <a href="lock-screen" title="锁屏"><i class="Hui-iconfont" style="font-size:18px">&#xe60e;</i></a> </li>
-                    <li id="Hui-msg"> <a onclick="thanks()" title="消息"><span class="badge badge-danger">3</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>
+                    <%--<li id="Hui-msg"> <a onclick="thanks()" title="消息"><span class="badge badge-danger">3</span><i class="Hui-iconfont" style="font-size:18px">&#xe68a;</i></a> </li>--%>
                     <li id="Hui-skin" class="dropDown right dropDown_hover"> <a href="javascript:;" class="dropDown_A" title="换肤"><i class="Hui-iconfont" style="font-size:18px">&#xe62a;</i></a>
                         <ul class="dropDown-menu menu radius box-shadow">
                             <li><a href="javascript:;" data-val="default" title="默认（蓝色）">默认（蓝色）</a></li>
