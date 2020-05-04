@@ -14,12 +14,10 @@ import com.qiniu.util.UrlSafeBase64;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Arrays;
@@ -29,17 +27,17 @@ import java.util.UUID;
 /**
  * @author Exrickx
  */
-public class QiniuUtil {
+public class QiniuTest {
 
-    private final static Logger log= LoggerFactory.getLogger(QiniuUtil.class);
+    private final static Logger log= LoggerFactory.getLogger(QiniuTest.class);
 
     /**
      * 生成上传凭证，然后准备上传
      */
-    private static String accessKey = "A75fdD9pUiyGtGnPfP830QvJbCYvGuA8ewk0eiUj";
-    private static String secretKey = "BUIhENyt-YtFFVnKavjo_7tQpWjwqJCjX7eaH98N";
-    private static String bucket = "xmall";
-    private static String origin="http://ow2h3ee9w.bkt.clouddn.com/";
+    private static String accessKey = "tvYPuBwCygJdLW8cO3UGHKIC_F5gFqz3m1TEp8vx";
+    private static String secretKey = "4G0d55OKNT70X9sozHT8uzcsiNqh8SEI_44UPf7K";
+    private static String bucket = "upload-2020";
+    private static String origin="http://q9te1ixg1.bkt.clouddn.com/";
     private static  Auth auth = Auth.create(accessKey, secretKey);
 
 
@@ -47,7 +45,7 @@ public class QiniuUtil {
         return auth.uploadToken(bucket, null, 3600, new StringMap().put("insertOnly", 1));
     }
 
-    public static String qiniuUpload(String filePath){
+    public static void qiniuUpload(String filePath){
 
         //构造一个带指定Zone对象的配置类 zone2华南
         Configuration cfg = new Configuration(Zone.zone2());
@@ -61,18 +59,13 @@ public class QiniuUtil {
         String upToken = auth.uploadToken(bucket);
 
         try {
-            Response response = uploadManager.put(localFilePath, key, upToken);
+
+            Response response = uploadManager.put(new File(localFilePath), key, upToken);
             //解析上传成功的结果
             DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);
-            return origin+putRet.key;
+//            return origin+putRet.key;
         }catch(QiniuException ex){
-            Response r = ex.response;
-            log.warn(r.toString());
-            try {
-                return r.bodyString();
-            } catch (QiniuException e) {
-                throw new XmallUploadException(e.toString());
-            }
+           log.error("123",ex);
         }
     }
 
@@ -150,29 +143,7 @@ public class QiniuUtil {
         return UUID.randomUUID().toString().replace("-","")+extName;
     }
 
-    public static String isValidImage(HttpServletRequest request, MultipartFile file){
-        //最大文件大小
-        long maxSize = 5242880;
-        //定义允许上传的文件扩展名
-        HashMap<String, String> extMap = new HashMap<String, String>();
-        extMap.put("image", "gif,jpg,jpeg,png,bmp");
 
-        if(!ServletFileUpload.isMultipartContent(request)){
-            return "请选择文件";
-        }
-
-        if(file.getSize() > maxSize){
-            return "上传文件大小超过5MB限制";
-        }
-        //检查扩展名
-        String fileName=file.getOriginalFilename();
-        String fileExt = fileName.substring(fileName.lastIndexOf(".") + 1).toLowerCase();
-        if(!Arrays.<String>asList(extMap.get("image").split(",")).contains(fileExt)){
-            return "上传文件扩展名是不允许的扩展名\n只允许" + extMap.get("image") + "格式";
-        }
-
-        return "valid";
-    }
 
     public static String checkExt(String fileName,String dirName){
         //定义允许上传的文件扩展名
@@ -191,6 +162,6 @@ public class QiniuUtil {
 
     public static void main(String[] args){
 //        base64Data("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2");
-        qiniuUpload("upload/1.jp");
+        qiniuUpload("./1.jpg");
     }
 }
