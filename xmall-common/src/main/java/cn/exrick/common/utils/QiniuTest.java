@@ -20,6 +20,8 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.UUID;
@@ -48,7 +50,7 @@ public class QiniuTest {
     public static void qiniuUpload(String filePath){
 
         //构造一个带指定Zone对象的配置类 zone2华南
-        Configuration cfg = new Configuration(Zone.zone2());
+        Configuration  cfg = new Configuration(Zone.zone2());
 
         UploadManager uploadManager = new UploadManager(cfg);
 
@@ -57,15 +59,18 @@ public class QiniuTest {
         String key = null;
         Auth auth = Auth.create(accessKey, secretKey);
         String upToken = auth.uploadToken(bucket);
+//        new File(localFilePath);
 
         try {
-
-            Response response = uploadManager.put(new File(localFilePath), key, upToken);
+            localFilePath= URLDecoder.decode(QiniuTest.class.getResource("/upload/1.jpg").getPath(),"utf-8");
+            Response response = uploadManager.put(localFilePath, key, upToken);
             //解析上传成功的结果
             DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);
 //            return origin+putRet.key;
         }catch(QiniuException ex){
            log.error("123",ex);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
     }
 

@@ -24,7 +24,7 @@ public class GoodsController {
 
     @Autowired
     private ContentService contentService;
-    @Autowired
+//    @Autowired
     private SearchService searchService;
 
     @RequestMapping(value = "/goods/home",method = RequestMethod.GET)

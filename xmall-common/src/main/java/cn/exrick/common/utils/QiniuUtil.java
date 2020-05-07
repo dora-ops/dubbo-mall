@@ -38,8 +38,8 @@ public class QiniuUtil {
      */
     private static String accessKey = "A75fdD9pUiyGtGnPfP830QvJbCYvGuA8ewk0eiUj";
     private static String secretKey = "BUIhENyt-YtFFVnKavjo_7tQpWjwqJCjX7eaH98N";
-    private static String bucket = "xmall";
-    private static String origin="http://ow2h3ee9w.bkt.clouddn.com/";
+    private static String bucket = "upload-2020";
+    private static String origin="http://q9te1ixg1.bkt.clouddn.com/";
     private static  Auth auth = Auth.create(accessKey, secretKey);
 
 
