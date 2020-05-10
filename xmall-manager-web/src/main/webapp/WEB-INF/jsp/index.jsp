@@ -40,7 +40,6 @@
                             <li><a href="javascript:;" onclick="member_add('添加用户','member-add','','630')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
                         </ul>
                         <li class="navbar-levelone current"><a href="javascript:;">平台</a></li>
-                        <li class="navbar-levelone"><a href="javascript:;">财务</a></li>
 
                     </li>
                 </ul>
@@ -140,14 +139,7 @@
                 </ul>
             </dd>
         </dl>
-        <dl id="menu-chart">
-            <dt><i class="Hui-iconfont">&#xe61e;</i> 统计报表<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
-                <ul>
 
-                </ul>
-            </dd>
-        </dl>
         <dl id="menu-system">
             <dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
