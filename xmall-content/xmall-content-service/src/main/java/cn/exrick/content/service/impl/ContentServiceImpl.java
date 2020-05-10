@@ -289,19 +289,19 @@ public class ContentServiceImpl implements ContentService {
     public ProductDet getProductDet(Long id) {
 
         //查询缓存
-        try{
-            //有缓存则读取
-            String json=jedisClient.get(PRODUCT_ITEM+":"+id);
-            if(json!=null){
-                ProductDet productDet= new Gson().fromJson(json,ProductDet.class);
-                log.info("读取了商品"+id+"详情缓存");
-                //重置商品缓存时间
-                jedisClient.expire(PRODUCT_ITEM+":"+id,ITEM_EXPIRE);
-                return productDet;
-            }
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+//        try{
+//            //有缓存则读取
+//            String json=jedisClient.get(PRODUCT_ITEM+":"+id);
+//            if(json!=null){
+//                ProductDet productDet= new Gson().fromJson(json,ProductDet.class);
+//                log.info("读取了商品"+id+"详情缓存");
+//                //重置商品缓存时间
+//                jedisClient.expire(PRODUCT_ITEM+":"+id,ITEM_EXPIRE);
+//                return productDet;
+//            }
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
 
         TbItem tbItem=tbItemMapper.selectByPrimaryKey(id);
         ProductDet productDet=new ProductDet();

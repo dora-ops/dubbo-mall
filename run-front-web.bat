@@ -1,2 +1,2 @@
-title front-web
-"C:\Program Files\Java\jdk1.8.0_171\bin\java" -Dmaven.multiModuleProjectDirectory=xmall-master\xmall-front-web -Dmaven.home=D:\apache-maven-3.5.3 -Dclassworlds.conf=D:\apache-maven-3.5.3\bin\m2.conf  -Dfile.encoding=UTF-8 -classpath D:\apache-maven-3.5.3\boot\plexus-classworlds-2.5.2.jar org.codehaus.classworlds.Launcher -s D:\apache-maven-3.5.3\conf\settings.xml -Dmaven.repo.local=D:\m2 tomcat7:run-war -f xmall-front-web\pom.xml
+title front-web 8012
+"C:\Program Files\Java\jdk1.8.0_171\bin\java" -agentlib:jdwp=transport=dt_socket,address=8012,server=y,suspend=n -Dmaven.multiModuleProjectDirectory=xmall-master\xmall-front-web -Dmaven.home=D:\apache-maven-3.5.3 -Dclassworlds.conf=D:\apache-maven-3.5.3\bin\m2.conf  -Dfile.encoding=UTF-8 -classpath D:\apache-maven-3.5.3\boot\plexus-classworlds-2.5.2.jar org.codehaus.classworlds.Launcher -s D:\apache-maven-3.5.3\conf\settings.xml -Dmaven.repo.local=D:\m2 tomcat7:run-war -f xmall-front-web\pom.xml
